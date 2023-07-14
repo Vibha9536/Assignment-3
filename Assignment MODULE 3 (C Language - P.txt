@@ -1,0 +1,652 @@
+                                Assignment MODULE: 3 (C Language - Programs)
+
+
+
+1Que - Write a Program to check the given year is leap year or not.
+
+Ans-  
+     #include<stdio.h>
+     int main()
+     {
+	int year;
+	printf("Enter a year:\n");
+	scanf("%d",&year);
+	
+	if(year%400==0)
+	{
+		printf("%d is a leap year\n",year);
+	}
+	
+	else if(year%100==0)
+	{
+		printf("%d is not a leap year\n",year);
+	}
+	
+	else if(year%4==0)
+	{
+		printf("%d is a leap year\n",year);
+	}
+	else
+	{
+		printf("%d is not a leap year",year);
+	}
+}
+
+2Que-Write a Program to check the given number is prime or not prime. 
+
+Ans-
+     #include <stdio.h> 
+
+     main() 
+     {
+       int n, i, c = 0;
+       printf("Enter any number:");
+       scanf("%d", &n);
+
+  
+       for (i = 1; i <= n; i++) 
+       {
+         if (n % i == 0) 
+	  {
+         c++;
+       }
+    }
+
+    if (c == 2) 
+    {
+        printf("its a Prime number");
+    }
+    else 
+    {
+         printf("its not a Prime number");
+         
+    }
+  
+ }
+
+3Que-Write a program user enter the 5 subjects mark. You have to make a total and 
+find the percentage. 
+a) percentage > 75 you have to print “Distinction” 
+b) percentage > 60 and percentage <= 75 you have to print “First class” 
+c) percentage >50 and percentage <= 60 you have to print “Second class”
+d) percentage > 35 and percentage <= 50 you have to print “Pass class” 
+e) Otherwise print “Fail”
+
+Ans-
+     #include <stdio.h>
+ 
+int main()
+{
+    float eng, guj, maths,eco, comp; 
+    float total,percentage;
+
+    
+    printf("Enter marks of five subjects: :- ");
+    scanf("%f%f%f%f%f", &eng, &guj, &maths, &eco, &comp);
+ 
+    total = eng + guj + maths + eco + comp;
+    
+    percentage = (total / 500.0)*100;
+ 
+    printf("Total marks = %.2lf\n", total);
+    printf("Percentage = %.2lf", percentage);
+ 
+    if(percentage>=75)
+    {
+    	printf("Distinction\n");
+	}
+	else if(percentage>=60)
+	{
+		printf(" First class\n");
+	}
+    else if(percentage>=50)
+    {
+    	printf(" Second class\n");
+	}
+	else if(percentage>=35)
+	{
+		printf(" Pass class\n");
+		
+	}
+	else if(percentage<35)
+	{
+		printf(" Fail\n");
+	}
+}
+
+4Que-Write a program of to find out the Area of Triangle, Rectangle and Circle 
+using Switch Case .(Must Be Menu Driven)
+
+Ans-
+     #include<stdio.h>
+#define PI 3.14
+main()
+{
+	float b,h,triangle,l,w,rectangle,r,circle;
+	char choice;
+	
+	printf("Enter your choice:\n");
+	scanf("%c",&choice);
+	
+	switch(choice)
+	{
+		case'A':
+		{
+		
+		 printf("Enter the base:\n");
+		         scanf("%f",&b);
+		         printf("Enter the height:\n");
+		         scanf("%f",&h);
+		         triangle=(b*h)/2;
+		         printf("total area of triangle is%.2lf\n",triangle);
+		         break;
+     	}  
+	    case'B':
+	    	
+	    {
+		
+		
+		 printf("Enter the length:\n");
+		         scanf("%f",&l);
+		         printf("Enter the width:\n");
+		         scanf("%",&w);
+		         rectangle=l*w;
+	             printf("total area of rectangle is%.2lf\n",rectangle);
+	             break;
+	    }
+	    case'C':
+	    {
+		
+		 printf("Enter the radius:\n");
+		         scanf("%f",&r);
+		         circle=PI*r*r;
+	             printf("total area of circle is%.2lf\n",circle);
+		         break;
+	    }
+		
+		
+		
+	}
+}
+  
+
+5Que-Write a program you have to print the Fibonacci series up to user given 
+number
+
+Ans-
+     #include<stdio.h>    
+int main()    
+{    
+ int n1=0,n2=1,n3,i,num;    
+ printf("Enter any number:");    
+ scanf("%d",&num);
+     
+ printf("\n%d %d",n1,n2); 
+    
+ for(i=2;i<num;i++)    
+ {    
+  n3=n1+n2;    
+  printf(" %d",n3);    
+  n1=n2;    
+  n2=n3;    
+ }  
+  return 0;  
+ }    
+
+6Que-Write a program to print the number in reverse order.
+
+Ans-#include<stdio.h>
+main()
+{
+	int n, r=0, rem;
+	
+	printf("enter any number:");
+	scanf("%d",&n);
+	
+	while(n!=0)
+	{
+		rem=n%10;
+		r=r*10+rem;
+		n/=10;
+	}
+	printf("reversed number =%d",r);
+	
+}
+     
+
+7Que-Write a program make a summation of given number
+
+Ans-#include<stdio.h>
+void main()
+{
+	int num, sum=0,fdigit,ldigit;
+	printf("enter any number:\n");
+	scanf("%d",&num);
+	
+	ldigit=num%10;
+	fdigit=num;
+	
+	while(num>=10)
+	{
+		num=num/10;
+	}
+	fdigit=num;
+	sum=fdigit+ldigit;
+	printf("sum of fdigit and lgigit is:%d",sum);
+	
+}
+    
+
+
+8Que-pyramid program :
+ a) *  
+    **  
+    *** 
+    **** 
+
+Ans-
+     #include<stdio.h>
+int main()
+{
+    char i,j;
+ 
+    
+    for ( i = 0; i <=5; i++) 
+	{
+ 
+        
+        for ( j = 0; j <= i; j++)
+	    {
+            printf(" * ",j);
+        }
+        
+		printf("\n");
+		
+		
+    }
+}
+
+B) 1  
+   2 3  
+   4 5 6 
+   7 8 9 10
+
+Ans-
+    #include<stdio.h>
+int main()
+{
+    int i,j;
+ 
+    
+    for ( i = 0; i <=5; i++) 
+	{
+ 
+        
+        for ( j = 0; j <= i; j++)
+	    {
+            printf(" %d ",j);
+        }
+        
+		printf("\n");
+    }
+    
+}
+
+ C * * * * 
+     * * * 
+       * * 
+         *
+
+Ans-
+     #include<stdio.h>
+main()
+{
+	int i,j,k;
+	for(i=1;i<=5;i++)
+	{
+		for (k=1;k<i;k++)
+		{
+		  printf(" ",i);
+		}
+		for(j=i;j<=5;j++)
+		{
+			printf("*",i);
+			
+		}
+		printf("\n");
+	}
+}
+
+9Que-Write a program to find out the max number from given 10 elements of array 
+
+Ans-#include<stdio.h>
+int max(int arr[],int n)
+{
+	int i;
+	int max=arr[0];
+	
+	for(i=1;i<n;i++)
+	
+	if(arr[i]>max)
+	max=arr[i];
+	
+	return max;
+}
+
+int main()
+{
+	int arr[]={20,44,76,99,21};
+	int n=sizeof(arr)/sizeof(arr[0]);
+	
+	printf("maximum number in array is %d",max(arr,n));
+}
+	
+	
+    
+
+10Que-Write a program to sort the array of 5 elements. 
+
+Ans-#include<stdio.h>
+int main()
+{
+	int a[5],i,j,temp;
+	printf("Enter array elements:");
+	
+	for(i=0;i<5;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	for(i=0;i<5;i++)
+	{
+		for(j=i+1;j<=5;j++)
+		{
+			if(a[i]>a[j])
+			{
+				temp=a[i];
+				a[i]=a[j];
+				a[j]=temp;
+			}
+		}
+	}
+	printf("array elements:");
+	for(i=0;i<5;i++)
+	{
+		printf("%d",a[i]);
+	}
+	
+	
+}
+     
+
+11Que-Write a Program to find the element of given position from the array
+
+Ans-#include<stdio.h>
+int main()
+{
+	int arr[30];
+	int size,i,tosearch,found;
+	
+	printf("Enter size of array:");
+	scanf("%d",&size);
+	
+	printf("Enter elements in array:");
+	for(i=0;i<size;i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+	
+	printf("Enter element to search:");
+	scanf("%d",&tosearch);
+	
+	found=0;
+	
+	for(i=0;i<size;i++)
+	{
+		if(arr[i]==tosearch)
+		{
+			found=1;
+			break;
+			
+		}
+	}
+	if(found==1)
+	{
+		printf("%d is found at position %d",tosearch,i+1);
+		
+	}
+	else
+	{
+		printf("%d is not found in array",tosearch);
+	}
+}
+    
+
+12Que-Write a program to find out the Max number from given Matrix
+
+Ans-#include<stdio.h>
+#include<stdio.h>
+int main()
+{
+	int mat[3][3],i,j,max;
+	printf("Enter elements of matrix:\n");
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		scanf("%d",&mat[i][j]);
+	}
+	max=mat[0][0];
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			if(max<mat[i][j])
+			max=mat[i][j];
+		}
+	}
+	printf("maximum element is:%d",max);
+}
+
+
+13Que- Write a program to copy string from one string to another string with user 
+define function.
+
+Ans-
+     #include<stdio.h>
+main()
+{
+	char a[20]={"java programming\n"};
+	char b[30]={" c programming"};
+	
+	char c[30];
+	
+	strcpy(c,a);
+	printf("%s",strcpy(c,a));
+	strcpy(c,b);
+	printf("%s",strcpy(c,b));
+}
+
+14Que-Write a program to find out the factorial of given number using function.
+
+Ans-#include<stdio.h>
+int main()
+
+{
+	int i,fact=1,n;
+	
+	printf("Enter your number:\n");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+		fact=fact*i;
+		
+	}
+	
+	printf("factorial of %d is %d",n,fact);
+	
+}
+    
+
+15Que-Write a program to print the Fibonacci series using function
+
+Ans-
+    #include<stdio.h>
+int fibonacci();
+int fibonacci()
+{
+	int a;
+	
+	printf("Enter any number :\n");
+	scanf("%d",&a);
+}
+
+main()
+{
+	int n1=0,n2=1,n3,i,a;
+	
+	printf("%d%d",n1,n2);
+	
+	for(i=2;i<a;i++)
+	{
+		n3=n1+n2;
+		printf("%d\t",n3);
+		n1=n2;
+		n2=n3;
+	}
+ 	
+ }
+
+16Que-Write a Program of Print a number and check the number is palindrome or 
+not using recursive Function 
+
+Ans-#include<stdio.h>
+int main()
+{
+	int n,r=0,rem,ini;
+	printf("Enter any number:\n");
+	scanf("%d",&n);
+	ini=n;
+	
+	while(n!=0)
+	{
+		rem=n%10;
+		r=r*10+rem;
+		n/=10;
+	}
+	if(ini==r)
+	{
+		printf("%d is palindrome",ini);
+		
+	}
+	else
+	{
+		printf("%d is not a palindrome",ini);
+	}
+}
+
+
+17Que-Write a program of structure for five employee that provides the following 
+information print and display empno, empname, address and age
+
+
+Ans-#include<stdio.h>
+struct emp
+{
+	int id,age;
+	char name[50];
+	char address[400];
+	
+};
+main()
+{
+	struct emp e[5];
+	int i;
+	for(i=1;i<5;i++)
+	{
+		printf("Enter id:\n");
+		scanf("%d",&e[i].id);
+		printf("Enter name:\n");
+		scanf("%s",&e[i].name);
+		printf("Enter age:\n");
+		scanf("%d",&e[i].age);
+		printf("Enter address:\n");
+		scanf("%s",&e[i].address);
+		
+	}
+	for(i=1;i<=5;i++)
+	{
+		printf("your id :%d\n",e[i].id);
+		printf("your name:%d\n",e[i].name);
+		printf("your age :%d\n",e[i].age);
+		printf("your address :%d\n",e[i].address);
+	}
+}
+
+
+18Que-Write program to make an addition of two number using pointer
+
+Ans-
+    #include<stdio.h>
+main()
+{
+	int a,b,*p,*q,sum;
+	printf("Enter two values:");
+	scanf("%d%d",&a,&b);
+	
+	p=&a;
+	q=&b;
+	
+	sum=*p+*q;
+	
+	printf("total is %d",sum);
+}
+
+19Que-Write a program to concatenate the two string using pointer. 
+
+Ans-
+    #include<stdio.h>
+main()
+{
+	char a[20]={"Java programming\n"};
+	char b[30]={"c programming"};
+	
+	printf("%s",strcat(a,b));
+}
+
+20Que-Write a program to sort the numbers using pointer and functions
+
+Ans-
+     #include <stdio.h> 
+  
+int sort(int n, int* ptr) 
+{	 
+    int i, j, temp; 
+    
+    for (i = 0; i < n; i++) 
+	{ 
+	
+    
+  
+        for (j = i + 1; j < n; j++) 
+		{ 
+  
+            if (*(ptr + j) < *(ptr + i)) 
+			{ 
+  
+                temp = *(ptr + i); 
+                *(ptr + i) = *(ptr + j); 
+                *(ptr + j) = temp; 
+            } 
+        } 
+     
+    }
+    for (i = 0; i < n; i++) 
+        printf("%d ", *(ptr + i)); 
+}  
+int main() 
+{ 
+    int n = 5; 
+    int arr[5] = { 0, 23, 14, 12, 9 }; 
+    sort(n, arr); 
+  
+    return 0; 
+} 
